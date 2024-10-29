@@ -3,7 +3,7 @@ The official implementation of the paper:
 <div align="center">
 <h1>
 <b>
-VATEX: Improving Referring Image Segmentation <br> using Vision-Aware Text Features
+Vision-Aware Text Features in Referring Image Segmentation: <br> From Object Understanding to Context Understanding
 </b>
 </h1>
 </div>
@@ -12,7 +12,13 @@ VATEX: Improving Referring Image Segmentation <br> using Vision-Aware Text Featu
 </p>
 
 ## Abstract
-Referring image segmentation is a challenging task that involves generating pixel-wise segmentation masks based on natural language descriptions. Existing methods have relied mostly on visual features to generate the segmentation masks while treating text features as supporting components. This over-reliance on visual features can lead to suboptimal results, especially in complex scenarios where text prompts are ambiguous or context-dependent. To overcome these challenges, we present a novel framework VATEX to improve referring image segmentation by enhancing object and context understanding with Vision-Aware Text Feature. Our method involves using CLIP to derive a CLIP Prior that integrates an object-centric visual heatmap with text description, which can be used as the initial query in DETR-based architecture for the segmentation task. Furthermore, by observing that there are multiple ways to describe an instance in an image, we enforce feature similarity between text variations referring to the same visual input by two components: a novel Contextual Multimodal Decoder that turns text embeddings into vision-aware text features, and a Meaning Consistency Constraint to ensure further the coherent and consistent interpretation of language expressions with the context understanding obtained from the image. Our method achieves a significant performance improvement on three benchmark datasets RefCOCO, RefCOCO+ and G-Ref. 
+Referring image segmentation is a challenging task that involves generating pixel-wise segmentation masks based on natural language descriptions. The complexity of this task increases with the intricacy of the sentences provided. 
+Existing methods have relied mostly on visual features to generate the segmentation masks while treating text features as supporting components. 
+However, this under-utilization of text understanding limits the model's capability to fully comprehend the given expressions. 
+In this work, we propose a novel framework that specifically emphasizes object and context comprehension inspired by human cognitive processes through Vision-Aware Text Features.
+Firstly, we introduce a CLIP Prior module to localize the main object of interest and embed the object heatmap into the query initialization process.
+Secondly, we propose a combination of two components: Contextual Multimodal Decoder and Meaning Consistency Constraint, to further enhance the coherent and consistent interpretation of language cues with the contextual understanding obtained from the image. 
+Our method achieves significant performance improvements on three benchmark datasets RefCOCO, RefCOCO+ and G-Ref.
 
 <!-- ## Update
 ``` update here ``` -->
